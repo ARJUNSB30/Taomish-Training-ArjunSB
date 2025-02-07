@@ -1,0 +1,2 @@
+Insufficient balance! Your current balance is: 5000.0
+Withdrawal amount must be greater than zero.
