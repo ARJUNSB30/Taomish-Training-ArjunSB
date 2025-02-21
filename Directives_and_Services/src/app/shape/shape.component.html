@@ -1,0 +1,38 @@
+<div>
+    <h2>Perimeter Calculator</h2>
+  
+    <label>Select Shape:</label>
+    <select [(ngModel)]="shapeType">
+      <option value="rectangle">Rectangle</option>
+      <option value="circle">Circle</option>
+      <option value="triangle">Triangle</option>
+    </select>
+
+
+    <div *ngIf="shapeType === 'rectangle'">
+      <label>Length:</label>
+      <input type="number" [(ngModel)]="length">
+      <label>Width:</label>
+      <input type="number" [(ngModel)]="width">
+    </div>
+
+
+    <div *ngIf="shapeType === 'circle'">
+      <label>Radius:</label>
+      <input type="number" [(ngModel)]="radius">
+    </div>
+  
+
+    <div *ngIf="shapeType === 'triangle'">
+      <label>Side A:</label>
+      <input type="number" [(ngModel)]="sideA">
+      <label>Side B:</label>
+      <input type="number" [(ngModel)]="sideB">
+      <label>Side C:</label>
+      <input type="number" [(ngModel)]="sideC">
+    </div>
+  
+
+    <button (click)="calculatePerimeter()">Calculate Perimeter</button>
+  </div>
+  

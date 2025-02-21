@@ -1,0 +1,12 @@
+<div class="btn">
+    <label for="name">Name</label>
+    <input type="text" id="name" [(ngModel)]="textInput" placeholder="Enter text here">
+
+    <button class="bttn" appDisableButton appTooltip>Submit</button>
+    
+    <br><br><br><br>
+    
+    <p>Snake Case: {{ textInput | pipe:'snake' }}</p>  
+    <p>Camel Case: {{ textInput | pipe:'camel' }}</p>  
+</div>
+
