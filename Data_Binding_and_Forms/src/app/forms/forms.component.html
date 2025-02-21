@@ -1,0 +1,50 @@
+<div class="body">
+<div class="container">
+    <h1 class="title">REGISTRATION FORM</h1>
+    <form [formGroup]="myForm"> 
+        <div class="forms">
+            <label>Name</label>
+            <input type="text" formControlName = "name" placeholder="Enter your full name">           
+        </div>           
+    
+        <div class="forms">
+            <label>Age</label>
+            <input type="number" formControlName = "age" placeholder="Enter your age">
+        </div>
+    
+        <div class="forms">
+            <label>Date of Birth</label>
+            <input type="date" formControlName = "dateofbirth" >
+        </div>
+
+        
+
+        <div formGroupName="address">
+            <label class="address">Address</label><br>
+            <div class="forms">
+                <label>Street</label>
+                <input type="text" formControlName = "street"  placeholder="street">
+            </div>
+
+            <div class="forms">
+                <label>Pincode</label>
+                <input type="text" formControlName = "pincode"  placeholder="pin">
+            </div>
+    
+            <div class="forms">
+                <label>Country</label>
+                <select id="country" formControlName = "country" >
+                    <option value="">Select your country</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="india">India</option>
+                </select>
+            </div>
+        </div>    
+        <button type="submit" (click)="onSubmit()"  class="button">Submit</button>
+    </form>
+</div>
+</div>
+    

@@ -1,0 +1,8 @@
+<!-- <app-forms></app-forms> -->
+
+<!-- <app-ngmodel></app-ngmodel> -->
+
+<!-- <app-interpolation><</app-interpolation> -->
+<app-custombinding [message]="msg"></app-custombinding> 
+<app-custombinding (customEvent)="receiveData($event)"></app-custombinding>
+<p>Message from child: {{ message }}</p>

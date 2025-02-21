@@ -1,0 +1,51 @@
+<div>
+    <table>
+        <caption>Employee Information</caption>
+        <thead>
+            <tr>
+                <th>Emp ID</th>
+                <th>Emp Name</th>
+                <th>Emp Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let emp of employees">
+                <td>{{ emp.empId }}</td>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.age }}</td>          
+            </tr>
+        </tbody>
+    </table>
+
+    <table *ngIf="showYoungestEmployee">
+        <caption>Youngest Employee Information</caption>
+        <thead>
+            <tr>
+                <th>Emp ID</th>
+                <th>Emp Name</th>
+                <th>Emp Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let new of youngestEmployee">
+                <td>{{ new.empId }}</td>
+                <td>{{ new.name }}</td>
+                <td>{{ new.age }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div  class= "button1" *ngIf="showConcatinated">
+        <p class="prnt1"><strong>Concatenated Names:</strong> {{concatenatedNames}}</p>
+        <p class="prnt2"><strong>Total Age:</strong> {{totalAge}}</p>
+    </div>
+
+    <div class="button">
+        <button (click)="findYoungestEmployee()" class="btn">Find Youngest</button>
+        <button (click)="processEmployeeData()" class="btn">Concat and Add</button>
+    </div>
+    
+   
+
+   
+</div>

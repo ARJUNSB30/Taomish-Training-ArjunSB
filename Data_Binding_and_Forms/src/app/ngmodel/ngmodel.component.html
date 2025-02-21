@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Voting Eligibility Checker</h2>
+    <div class="form-group">
+      <label for="age">Enter your age:</label>
+      <input type="number" id="age" [(ngModel)]="age" (ngModelChange)="checkAge()" placeholder="Enter age" min="1" max="150"
+      >
+    </div>
+    <div [class]="resultClass" *ngIf="showResult">
+      {{ message }}
+    </div>
+  </div>
