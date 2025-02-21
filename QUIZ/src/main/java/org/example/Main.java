@@ -34,8 +34,8 @@ public class Main {
             }
         }
 
-            System.out.print("GOOD "+name+" You have completed the test");
-            System.out.print("YOUR "+name+" You score is "+score.fetchScore()+"/5");
+            System.out.println("GOOD "+name+" You have completed the test");
+            System.out.println("HI "+name+" ,Your score is "+score.fetchScore()+"/"+question.getQuestionCount());
 
             scanner.close();
 

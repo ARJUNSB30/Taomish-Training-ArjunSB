@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.row {
+    display: flex;
+    gap: 0.5rem;    
+}
+
+.item {
+    text-align: center;
+    color: white;
+    border: 2px solid black;
+    padding: 10.5rem;
+    flex: 1; 
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+
+.green {
+    background-color: green;
+    flex: 4.25; 
+}
+
+.black {
+    background-color: black;
+}

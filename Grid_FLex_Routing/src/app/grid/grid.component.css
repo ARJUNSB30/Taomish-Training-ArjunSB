@@ -1,0 +1,35 @@
+
+body
+{
+  margin: 0 auto; 
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  background-color: lightgrey;
+  gap: 0.9375rem;
+  padding : 1.125rem;
+ 
+}
+
+.item {
+  padding:10.06rem;
+  text-align: center;
+  color: white;
+  border: 2px solid black;
+}
+
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+
+
+.green {
+  background-color: green;
+  grid-column: span 2; 
+}
+
+.black {
+  background-color: black;
+}
