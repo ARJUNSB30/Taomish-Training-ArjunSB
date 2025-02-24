@@ -1,26 +1,26 @@
 package com.example.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
+    private final UserService userService;
 
-    @Autowired
-    private UserRepository userRepository;
-
-    // Insert User - POST
-    @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userRepository.save(user);
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
-    // Retrieve Users - GET
+    @PostMapping
+    public User createUser(@RequestBody User user) {
+        user.setId(null);  // Ensure new user creation
+        return userService.saveUser(user);
+    }
+
     @GetMapping
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return userService.getAllUsers();
     }
 }
